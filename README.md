@@ -1,5 +1,33 @@
 # React + Vite
 
+## Getting the starting point
+
+**Option A — fresh clone at the starting point**
+
+```bash
+git clone --branch v1-start https://github.com/bbwlc/refcard-03-fe-react-vite.git
+cd refcard-03-fe-react-vite
+npm install
+npm run dev
+```
+
+**Option B — you already have the repo cloned**
+
+```bash
+git fetch --tags
+git checkout v1-start
+npm install
+npm run dev
+```
+
+This puts you in a "detached HEAD" state at the tag — fine for exploring, but if you'll commit your own work, branch off it first:
+
+```bash
+git checkout -b my-work v1-start
+```
+
+> The app calls a backend at `http://localhost:8080/v1/trips` (see the `RefCard-03-be-SpringBootBusinessTrips` project), so make sure that's running too for the trip list / wishlist to show real data.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

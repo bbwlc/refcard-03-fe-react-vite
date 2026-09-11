@@ -6,6 +6,8 @@ import {getBusinessTrips} from "./tripsService.js";
 import {useWishlist} from "./wishlistContext.jsx";
 import {formatTripDate} from "./dateUtils.js";
 
+const imgsFolder = import.meta.env.VITE_IMGS || "items";
+
 function TripList() {
     const [trips, setTrips] = useState([]);
 
@@ -42,7 +44,7 @@ function Trip({trip}) {
         <div className="col">
             <div className="card h-100 shadow-sm">
                 <img
-                    src={`images/items/${id}.jpg`}
+                    src={`images/${imgsFolder}/${id}.jpg`}
                     className="card-img-top"
                     style={{height: "160px", objectFit: "cover"}}
                     alt={title}

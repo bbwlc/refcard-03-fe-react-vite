@@ -4,6 +4,8 @@ import {faHeart, faTrashCan} from "@fortawesome/free-solid-svg-icons";
 import {useWishlist} from "./wishlistContext.jsx";
 import {formatTripDate} from "./dateUtils.js";
 
+const imgsFolder = import.meta.env.VITE_IMGS || "items";
+
 export default function Wishlist() {
     const {wishlist, dispatch} = useWishlist();
 
@@ -58,7 +60,7 @@ function Wish({item}) {
             <td>
                 <div className="d-flex align-items-center gap-2">
                     <img
-                        src={`images/items/${id}.jpg`}
+                        src={`images/${imgsFolder}/${id}.jpg`}
                         className="img-thumbnail"
                         style={{width: "56px", height: "56px", objectFit: "cover"}}
                         alt={title}
